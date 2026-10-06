@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore mountain views, share a review, and get in touch.">
+  <title>Mountain Escape | Explore More</title>
+  <link rel="stylesheet" href="./style.css">
+  <script src="./script.js" defer></script>
+</head>
+
+<body>
+
+  <header class="site-header">
+    <nav class="navbar wrapper" aria-label="Main navigation">
+
+      <a class="brand" href="#home">
+        MOUNTAIN<span>ESCAPE</span>
+      </a>
+
+      <button
+        class="menu-button"
+        id="menuButton"
+        type="button"
+        aria-expanded="false"
+        aria-controls="navLinks"
+      >
+        <span class="visually-hidden">Toggle navigation</span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <div class="nav-links" id="navLinks">
+        <a href="#home">Home</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- HERO SECTION -->
+    <section class="hero wrapper" id="home">
+
+      <div class="hero-copy">
+
+        <p class="eyebrow">TAKE THE SCENIC ROUTE</p>
+
+        <h1>
+          Find your<br>
+          mountain <em>moment.</em>
+        </h1>
+
+        <p class="intro">
+          Step away from the noise and explore a few views that remind us
+          how good it feels to get outside.
+        </p>
+
+        <a class="button" href="#gallery">
+          Explore the gallery
+          <span aria-hidden="true">↘</span>
+        </a>
+
+        <p class="small-note">
+          Three places to pause, breathe, and look a little further.
+        </p>
+
+      </div>
+
+      <div class="hero-image photo-frame">
+
+        <img
+          id="mainImage"
+          src="./img.1.jpg"
+          alt="Alpine Morning mountain landscape"
+        >
+
+        <span class="photo-label" id="heroLabel">
+          Alpine Morning
+        </span>
+
+      </div>
+
+    </section>
+
+
+    <!-- GALLERY SECTION -->
+    <section class="gallery-section" id="gallery">
+
+      <div class="wrapper">
+
+        <div class="section-heading">
+
+          <div>
+            <p class="eyebrow">THE COLLECTION</p>
+
+            <h2>
+              Views worth <em>the climb.</em>
+            </h2>
+          </div>
+
+          <p>
+            Choose a scene or use the arrows to explore.
+          </p>
+
+        </div>
+
+
+        <div class="gallery">
+
+          <div class="gallery-photo photo-frame">
+
+            <img
+              id="galleryImage"
+              src="./img.1.jpg"
+              alt="Alpine Morning mountain landscape"
+            >
+
+            <button
+              class="gallery-arrow previous"
+              id="previousBtn"
+              type="button"
+              aria-label="Previous image"
+            >
+              ←
+            </button>
+
+            <button
+              class="gallery-arrow next"
+              id="nextBtn"
+              type="button"
+              aria-label="Next image"
+            >
+              →
+            </button>
+
+            <span class="photo-label" id="galleryCount">
+              01 / 03
+            </span>
+
+          </div>
+
+
+          <div class="gallery-info">
+
+            <p class="eyebrow">
+              SCENE <span id="sceneNumber">01</span>
+            </p>
+
+            <h3 id="mountainTitle">
+              Alpine Morning
+            </h3>
+
+            <p id="mountainDescription">
+              Soft morning light across a quiet range of high peaks.
+            </p>
+
+            <div
+              class="thumbnails"
+              id="thumbnails"
+              aria-label="Choose a mountain photo"
+            ></div>
+
+            <p class="key-hint">
+              Tip: use ← and → on your keyboard
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- REVIEWS SECTION -->
+    <section class="reviews-section" id="reviews">
+
+      <div class="wrapper reviews-layout">
+
+        <div class="reviews-intro">
+
+          <p class="eyebrow">TRAIL NOTES</p>
+
+          <h2>
+            Share your<br>
+            <em>thoughts.</em>
+          </h2>
+
+          <p>
+            Enjoyed the gallery? Leave a rating or a quick note
+            for the next visitor.
+          </p>
+
+          <div class="rating-summary">
+
+            <strong id="averageRating">—</strong>
+
+            <div>
+              <span id="averageStars" class="summary-stars">
+                ☆☆☆☆☆
+              </span>
+
+              <small id="reviewCount">
+                No reviews yet
+              </small>
+            </div>
+
+          </div>
+
+          <p class="privacy-note">
+            Reviews are saved in this browser on this device.
+          </p>
+
+        </div>
+
+
+        <div class="reviews-content">
+
+          <form class="card" id="reviewForm">
+
+            <h3>Write a review</h3>
+
+            <label for="reviewName">
+              Your name
+            </label>
+
+            <input
+              id="reviewName"
+              name="name"
+              type="text"
+              maxlength="40"
+              placeholder="Your name"
+              required
+            >
+
+
+            <span class="field-label">
+              Your rating
+            </span>
+
+            <div
+              class="star-picker"
+              id="starPicker"
+              role="group"
+              aria-label="Choose a rating from one to five stars"
+            >
+
+              <button
+                type="button"
+                data-rating="1"
+                aria-label="1 star"
+                aria-pressed="false"
+              >
+                ★
+              </button>
+
+              <button
+                type="button"
+                data-rating="2"
+                aria-label="2 stars"
+                aria-pressed="false"
+              >
+                ★
+              </button>
+
+              <button
+                type="button"
+                data-rating="3"
+                aria-label="3 stars"
+                aria-pressed="false"
+              >
+                ★
+              </button>
+
+              <button
+                type="button"
+                data-rating="4"
+                aria-label="4 stars"
+                aria-pressed="false"
+              >
+                ★
+              </button>
+
+              <button
+                type="button"
+                data-rating="5"
+                aria-label="5 stars"
+                aria-pressed="false"
+              >
+                ★
+              </button>
+
+            </div>
+
+
+            <label for="reviewText">
+              Your review
+            </label>
+
+            <textarea
+              id="reviewText"
+              name="review"
+              rows="3"
+              maxlength="400"
+              placeholder="What did you think?"
+              required
+            ></textarea>
+
+
+            <button class="button" type="submit">
+              Post review
+              <span aria-hidden="true">↗</span>
+            </button>
+
+            <p
+              class="form-status"
+              id="reviewStatus"
+              role="status"
+              aria-live="polite"
+            ></p>
+
+          </form>
+
+
+          <div class="review-list-wrap">
+
+            <h3 class="list-title">
+              Visitor reviews
+              <span id="listReviewCount">0</span>
+            </h3>
+
+            <div
+              class="review-list"
+              id="reviewList"
+              aria-live="polite"
+            ></div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- CONTACT SECTION -->
+    <section class="contact-section" id="contact">
+
+      <div class="wrapper contact-layout">
+
+        <div>
+
+          <p class="eyebrow">
+            GET IN TOUCH
+          </p>
+
+          <h2>
+            Have a note<br>
+            for <em>the trail?</em>
+          </h2>
+
+          <p class="contact-copy">
+            Questions, ideas, or a view we should add?
+            Leave a message.
+          </p>
+
+          <p class="contact-notice">
+            This demo saves your message in the current browser.
+            It does not send email.
+          </p>
+
+        </div>
+
+
+        <form class="card contact-form" id="contactForm">
+
+          <h3>
+            Send a message
+          </h3>
+
+
+          <div class="form-row">
+
+            <div>
+
+              <label for="contactName">
+                Name
+              </label>
+
+              <input
+                id="contactName"
+                name="name"
+                type="text"
+                maxlength="60"
+                placeholder="Your name"
+                required
+              >
+
+            </div>
+
+
+            <div>
+
+              <label for="contactEmail">
+                Email
+              </label>
+
+              <input
+                id="contactEmail"
+                name="email"
+                type="email"
+                maxlength="120"
+                placeholder="you@example.com"
+                required
+              >
+
+            </div>
+
+          </div>
+
+
+          <label for="contactSubject">
+            Subject
+          </label>
+
+          <input
+            id="contactSubject"
+            name="subject"
+            type="text"
+            maxlength="100"
+            placeholder="What is it about?"
+            required
+          >
+
+
+          <label for="contactMessage">
+            Message
+          </label>
+
+          <textarea
+            id="contactMessage"
+            name="message"
+            rows="4"
+            maxlength="1000"
+            placeholder="Write your message..."
+            required
+          ></textarea>
+
+
+          <button
+            class="button button-light"
+            type="submit"
+          >
+            Save message
+            <span aria-hidden="true">↗</span>
+          </button>
+
+
+          <p
+            class="form-status"
+            id="contactStatus"
+            role="status"
+            aria-live="polite"
+          ></p>
+
+        </form>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+
+    <div class="wrapper footer-inner">
+
+      <a class="brand" href="#home">
+        MOUNTAIN<span>ESCAPE</span>
+      </a>
+
+      <p>
+        Take only memories. Leave only kind words.
+      </p>
+
+      <a href="#home">
+        BACK TO TOP ↑
+      </a>
+
+    </div>
+
+  </footer>
+
+</body>
+</html>
